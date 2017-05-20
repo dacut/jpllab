@@ -1,0 +1,43 @@
+body {
+}
+
+.after-navbar {
+    margin-top: 100px;
+}
+
+.bottom-spacer {
+    padding-top: 200px;
+}
+
+.navbar.rolemaker {
+}
+
+.navbar-brand.rolemaker {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flash.well {
+    border-width: 5px;
+    border-radius: 12px;
+}
+
+.flash.error {
+    border-color: #cc0000;
+}
+
+.flash.warning {
+    border-color: #cccc00;
+}
+
+.flash.info {
+    border-color: #0000cc;
+}
+
+.fixed-font {
+    font-family: monospace;
+}
+
+.smaller {
+    font-size: 70%;
+}

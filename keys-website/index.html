@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- link rel="icon" href="../../favicon.ico" -->
+
+    <title>Key retrieval</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href='css/bootstrap.min.css' rel="stylesheet">
+
+    <!-- Site-specific CSS -->
+    <link href='css/jpllab.css' rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top rolemaker">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href='#'>Developing on AWS with Python and Boto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container after-navbar">
+      <h1>Lab credentials</h1>
+    </div>
+    <div class="container">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="userid">User Id</label>
+          <input type="text" class="form-control" id="userid" name="userid">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" onclick="decrypt()">
+        </div>
+        <button class="btn btn-default" type="submit" onclick="decrypt()">Get Credentials</button>
+        <div class="alert alert-danger hidden" id="invalid-msg">
+          Invalid username or password.
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="accesskey">AWS Access Key</label>
+          <input type="text" class="form-control fixed-font" id="accesskey" name="accesskey" disabled>
+        </div>
+        <div class="form-group">
+          <label for="secretkey">AWS Secret Key</label>
+          <input type="text" class="form-control fixed-font" id="secretkey" name="secretkey" disabled>
+        </div>
+        <div class="form-group">
+          <label for="sshkey">SSH Key</label>
+          <textarea class="form-control fixed-font smaller" id="sshkey" name="sshkey" rows="27" disabled></textarea>
+        </div>
+      </div>
+    </div>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/sjcl.js'></script>
+    <script src='js/keydata.js'></script>
+    <script src='js/keyutils.js'></script>
+  </body>
+</html>
