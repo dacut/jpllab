@@ -72,6 +72,11 @@
         </div>
         <div class="form-group">
           <label for="sshkey">SSH Key</label>
+          <form action="https://3ilq0rsum0.execute-api.us-west-2.amazonaws.com/prod/" method="POST">
+            <button class="btn btn-default download-button" type="submit" disabled name="format" value="PEM">Download PEM (MacOS, Linux)</button>
+            <button class="btn btn-default download-button" type="submit" disabled name="format" value="PPK">Download PPK (Windows PuTTY)</button>
+            <input type="hidden" id="pemkey" name="key" value="">
+          </form>
           <textarea class="form-control fixed-font smaller" id="sshkey" name="sshkey" rows="27" disabled></textarea>
         </div>
       </div>

@@ -1,0 +1,8 @@
+{
+    "prod": {
+        "app_function": "downloader.app", 
+        "aws_region": "us-west-2", 
+        "profile_name": "scilab", 
+        "s3_bucket": "zappa-bylb6ijmu"
+    }
+}

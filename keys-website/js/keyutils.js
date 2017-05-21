@@ -12,20 +12,25 @@ function decrypt() {
             result = JSON.parse(result);
 
             $("#sshkey").val(result.sshKey);
+            $("#pemkey").val(result.sshKey);
             $("#accesskey").val(result.accessKey);
             $("#secretkey").val(result.secretKey);
+            $(".download-button").removeAttr("disabled");
 
             $("#invalid-msg").addClass("hidden");
             return;
         }
         catch (e) {
             // Invalid password; just fall through.
+            console.log("Crypto failed: " + e)
         }
     }
 
     $("#sshkey").val("");
+    $("#pemkey").val("");
     $("#accesskey").val("");
     $("#secretkey").val("");
+    $(".download-button").attr("disabled", "disabled");
 
     $("#invalid-msg").removeClass("hidden");
 
